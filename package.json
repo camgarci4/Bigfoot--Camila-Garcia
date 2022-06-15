@@ -1,0 +1,25 @@
+{
+  "name": "desafio1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    “build-css”: “node-sass --include-path scss scss/style.scss css/style.css”,
+    “watch-css”: “nodemon -e scss -x \”npm run build-css\””
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camgarci4/BIGFOOT-Camila-Garcia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camgarci4/BIGFOOT-Camila-Garcia/issues"
+  },
+  "homepage": "https://github.com/camgarci4/BIGFOOT-Camila-Garcia#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16"
+  }
+}
