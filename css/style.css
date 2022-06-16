@@ -86,7 +86,8 @@ main {
   grid-template-columns: 1fr;
 }
 
-#prev:hover, #next:hover {
+#prev:hover,
+#next:hover {
   background-color: black;
 }
 
@@ -150,30 +151,48 @@ footer {
   padding: 10px;
 }
 
-#punto,
-#punto-dos {
+#pie {
+  display: flex;
+  justify-content: space-between;
+}
+#pie #punto,
+#pie #punto-dos {
   list-style: none;
   justify-content: flex-start;
   margin: 0;
 }
-#punto a,
-#punto-dos a {
+#pie #punto a,
+#pie #punto-dos a {
   text-decoration: none;
   color: rgb(175, 93, 156);
 }
-#punto a:hover,
-#punto-dos a:hover {
+#pie #punto a:hover,
+#pie #punto-dos a:hover {
   color: rgb(221, 185, 255);
 }
 
-.fb, .ig {
+.fb,
+.ig {
   display: flex;
   justify-content: space-between;
 }
-.fb #iconIg, .fb #iconFb, .ig #iconIg, .ig #iconFb {
+.fb #iconIg,
+.fb #iconFb,
+.ig #iconIg,
+.ig #iconFb {
   color: rgb(175, 93, 156);
   padding-right: 2px;
   padding-top: 3px;
+}
+
+#accordionFlushExample {
+  display: none;
+}
+#accordionFlushExample .accordion-header {
+  background-color: rgb(245, 245, 245);
+}
+#accordionFlushExample .accordion-header button {
+  background-color: rgb(245, 245, 245);
 }
 
 #columnUbi {
@@ -289,11 +308,11 @@ section a:hover {
   footer {
     flex-flow: column;
   }
-  #punto-dos {
-    flex-flow: column;
-    justify-content: flex-start;
+  #pie {
+    display: none;
   }
   #columnUbi {
+    padding-top: 20px;
     padding-left: 30px;
   }
   .nombre-empresa {
@@ -305,6 +324,10 @@ section a:hover {
   .nombre-empresaMobile {
     display: flex;
     justify-content: flex-start;
+  }
+  .nombre-empresaMobile a {
+    color: rgb(175, 93, 156);
+    text-decoration: none;
   }
   table,
 th,
@@ -329,6 +352,31 @@ td {
   }
   #navbar-ul a:hover {
     color: black;
+  }
+  #accordionFlushExample {
+    display: flex;
+    flex-flow: column;
+  }
+  #accordionFlushExample .accordion-body {
+    background-color: rgb(245, 245, 245);
+  }
+  #accordionFlushExample button:hover {
+    color: rgb(175, 93, 156);
+  }
+  #accordionFlushExample #punto,
+#accordionFlushExample #punto-dos {
+    list-style: none;
+    justify-content: flex-start;
+    margin: 0;
+  }
+  #accordionFlushExample #punto a,
+#accordionFlushExample #punto-dos a {
+    text-decoration: none;
+    color: rgb(175, 93, 156);
+  }
+  #accordionFlushExample #punto a:hover,
+#accordionFlushExample #punto-dos a:hover {
+    color: rgb(221, 185, 255);
   }
 }
 @media screen and (max-width: 480px) {

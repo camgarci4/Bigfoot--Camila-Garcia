@@ -94,7 +94,8 @@ main {
     grid-template-columns: 1fr;
 }
 
-#prev, #next {
+#prev,
+#next {
     &:hover {
         background-color: $color-tipografia;
     }
@@ -168,31 +169,51 @@ footer {
     padding: 10px;
 }
 
-#punto,
-#punto-dos {
-    list-style: map-get($header, style);
-    justify-content: flex-start;
-    margin: 0;
+#pie {
+ display: flex;
+ justify-content: space-between;
+ 
+    #punto,
+    #punto-dos {
+        list-style: map-get($header, style);
+        justify-content: flex-start;
+        margin: 0;
 
-    a {
-        text-decoration: map-get($header, style);
-        color: $color-fuerte;
+        a {
+            text-decoration: map-get($header, style);
+            color: $color-fuerte;
 
-        &:hover {
-            color: $color-fondo;
+            &:hover {
+                color: $color-fondo;
+            }
         }
+
     }
-    
 }
 
-.fb, .ig {
+
+.fb,
+.ig {
     display: flex;
     justify-content: space-between;
 
-    #iconIg, #iconFb {
+    #iconIg,
+    #iconFb {
         color: $color-fuerte;
         padding-right: 2px;
         padding-top: 3px;
+    }
+}
+
+#accordionFlushExample {
+    display: map-get($header, style);
+
+    .accordion-header {
+        background-color: $color-base;
+
+        button {
+            background-color: $color-base;
+        }
     }
 }
 
@@ -200,8 +221,8 @@ footer {
     flex-flow: column;
     justify-content: flex-end;
     padding-bottom: 20px;
+
     .ubi {
         font-size: 16px;
     }
 }
-
