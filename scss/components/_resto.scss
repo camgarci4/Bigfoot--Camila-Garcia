@@ -1,0 +1,111 @@
+@media screen and (max-width: 780px) {
+
+    .contenedorGrid {
+        grid-template-rows: 70px auto auto;
+    }
+
+    .containerCard {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        flex-flow: column;
+    }
+
+    .card {
+        width: 90%;
+        margin: 15px;
+    }
+
+    .card .contenido h2 {
+        font-size: 17px;
+    }
+
+    .card .contenido p {
+        font-size: 16px;
+    }
+
+    .card .contenido ul {
+        font-size: 16px;
+    }
+
+    nav ul li a {
+        font-size: 17px;
+        padding: 3px 8px;
+    }
+
+    footer {
+        flex-flow: column;
+    }
+
+    #punto-dos {
+        flex-flow: column;
+        justify-content: flex-start;
+    }
+
+    #columnUbi {
+        padding-left: 30px;
+    }
+
+    .nombre-empresa {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .nombre-empresaMobile {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    table,
+    th,
+    td {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .ig,
+    .fb {
+        justify-content: flex-start;
+    }
+
+    #navbar {
+        display: flex;
+    }
+
+    button .navbar-toggler {
+        border: none;
+    }
+
+    #navbar-ul a {
+        color: $color-fuerte;
+    }
+
+    #navbar-ul a:hover {
+        color: $color-tipografia;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    #menu {
+        display: none;
+    }
+
+    table,
+    th,
+    td {
+        padding: 10px 35px 5px 35px;
+        font-size: 14px;
+    }
+
+    img {
+        width: 400px;
+    }
+
+}

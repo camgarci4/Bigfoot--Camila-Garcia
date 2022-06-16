@@ -1,3 +1,4 @@
+/* INDEX */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,44 +8,96 @@ body {
   background-color: rgb(221, 185, 255);
   font-family: "Montserrat", sans-serif;
 }
-body header {
+
+.contenedorGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto 330px;
+}
+
+/* HEADER */
+header {
   background-color: rgb(245, 245, 245);
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-body header nav #menu {
+
+.nombre-empresa {
+  font-size: 40px;
+  font-weight: 900;
+}
+.nombre-empresa:hover {
+  transform: translateY(3%);
+}
+.nombre-empresa a {
+  color: rgb(175, 93, 156);
+  text-decoration: none;
+}
+.nombre-empresa a:hover {
+  color: black;
+}
+
+.logo {
+  padding-left: 10px;
+}
+
+#menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  list-style: none;
+  margin: 0;
 }
-body header nav ul {
-  justify-content: space-between;
-  align-items: center;
-}
-body header nav a {
+#menu a {
   font-size: 20px;
   padding: 7px 13px;
   font-weight: 600;
   color: rgb(175, 93, 156);
   text-decoration: none;
 }
-body header .nombre-empresa {
-  font-size: 40px;
-  font-weight: 900;
+#menu a:hover {
+  color: black;
 }
 
+/* media queries mobile menu */
+#navbar {
+  display: none;
+}
+
+.nombre-empresaMobile {
+  font-size: 35px;
+  font-weight: 900;
+  padding: 5px;
+  display: none;
+}
+
+/* MAIN CARROUSEL */
 main {
   justify-content: center;
   padding-bottom: 30px;
 }
-main .container {
+
+.containerIndex {
   width: 100%;
   display: grid;
-  text-align: center;
+  grid-template-columns: 1fr;
 }
-main .container .card {
+
+#prev:hover, #next:hover {
+  background-color: black;
+}
+
+/* MAIN CARD (INDEX-COMPRAR) */
+.containerCard {
+  width: 100%;
+  display: flex;
+  padding-top: 30px;
+}
+
+.card {
   width: 100%;
   margin: 20px;
   border-radius: 6px;
@@ -54,30 +107,243 @@ main .container .card {
   cursor: default;
   transition: all 400ms ease;
 }
-main .container .card:hover {
+.card:hover {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
   transform: translateY(3%);
 }
-main .container .card h3 {
+.card .contenido {
+  padding: 15px;
+  text-align: center;
+}
+.card .contenido p {
+  font-weight: 400;
+  font-size: 19px;
+}
+.card .contenido a {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid rgb(175, 93, 156);
+  border-radius: 4px;
+  transition: all 400ms ease;
+  text-decoration: none;
+  color: rgb(175, 93, 156);
+}
+.card .contenido a:hover {
+  background-color: rgb(175, 93, 156);
+  color: black;
+}
+.card .contenido ul {
+  text-align: start;
+  font-size: 19px;
+  font-weight: 400;
+}
+.card .contenido h2 {
+  font-size: 25px;
+}
+
+/* FOOTER */
+footer {
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#punto,
+#punto-dos {
+  list-style: none;
+  justify-content: flex-start;
+  margin: 0;
+}
+#punto a,
+#punto-dos a {
+  text-decoration: none;
+  color: rgb(175, 93, 156);
+}
+#punto a:hover,
+#punto-dos a:hover {
+  color: rgb(221, 185, 255);
+}
+
+.fb, .ig {
+  display: flex;
+  justify-content: space-between;
+}
+.fb #iconIg, .fb #iconFb, .ig #iconIg, .ig #iconFb {
+  color: rgb(175, 93, 156);
+  padding-right: 2px;
+  padding-top: 3px;
+}
+
+#columnUbi {
+  flex-flow: column;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+#columnUbi .ubi {
+  font-size: 16px;
+}
+
+/* MAIN COMPRAR */
+h2,
+h3 {
   font-weight: 600;
   text-align: center;
   padding-bottom: 15px;
   padding-top: 15px;
 }
-main .container .card .button button {
-  border: none;
-  background-color: white;
+
+.container {
+  width: 100%;
+  display: grid;
+  text-align: center;
+}
+
+.button button {
+  background-color: rgb(221, 185, 255);
   color: black;
 }
-main .container .card .button button:hover {
+.button button:hover {
   background-color: rgb(175, 93, 156);
 }
-main section {
+
+section {
   font-size: 18px;
   display: flex;
   justify-content: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  transition: all 400ms ease;
+}
+section a {
+  color: rgb(175, 93, 156);
+}
+section a:hover {
+  transform: translateY(5%);
+  color: black;
+}
+
+.selector {
+  display: flex;
+  padding: 10px;
+}
+
+/* MAIN TALLES */
+#tabla {
+  display: flex;
+  justify-content: center;
+}
+
+/* MAIN CONTACTO */
+.contacto {
+  display: flex;
+  justify-content: center;
+}
+.contacto p {
+  font-size: 23px;
+  font-weight: 400;
+}
+.contacto label {
+  font-size: 20px;
+  font-weight: 400;
+}
+.contacto h4 {
+  font-size: 23px;
+  font-weight: 600;
+}
+.contacto .btn-group button {
+  background-color: white;
+  color: black;
+}
+.contacto .btn-group button:hover {
+  background-color: rgb(175, 93, 156);
+}
+
+@media screen and (max-width: 780px) {
+  .contenedorGrid {
+    grid-template-rows: 70px auto auto;
+  }
+  .containerCard {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    flex-flow: column;
+  }
+  .card {
+    width: 90%;
+    margin: 15px;
+  }
+  .card .contenido h2 {
+    font-size: 17px;
+  }
+  .card .contenido p {
+    font-size: 16px;
+  }
+  .card .contenido ul {
+    font-size: 16px;
+  }
+  nav ul li a {
+    font-size: 17px;
+    padding: 3px 8px;
+  }
+  footer {
+    flex-flow: column;
+  }
+  #punto-dos {
+    flex-flow: column;
+    justify-content: flex-start;
+  }
+  #columnUbi {
+    padding-left: 30px;
+  }
+  .nombre-empresa {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .nombre-empresaMobile {
+    display: flex;
+    justify-content: flex-start;
+  }
+  table,
+th,
+td {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .ig,
+.fb {
+    justify-content: flex-start;
+  }
+  #navbar {
+    display: flex;
+  }
+  button .navbar-toggler {
+    border: none;
+  }
+  #navbar-ul a {
+    color: rgb(175, 93, 156);
+  }
+  #navbar-ul a:hover {
+    color: black;
+  }
+}
+@media screen and (max-width: 480px) {
+  #menu {
+    display: none;
+  }
+  table,
+th,
+td {
+    padding: 10px 35px 5px 35px;
+    font-size: 14px;
+  }
+  img {
+    width: 400px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

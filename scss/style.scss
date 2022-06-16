@@ -1,2 +1,7 @@
-@import"../components/nav";
-@import"../components/comprar";
+@import"./base/variables";
+@import"./base/maps";
+@import"./components/index";
+@import"./components/comprar";
+@import"./components/talles";
+@import"./components/contacto";
+@import"./components/resto";

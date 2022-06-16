@@ -1,0 +1,29 @@
+/* MAIN CONTACTO */
+.contacto {
+        display: flex;
+        justify-content: center;
+        p {
+            font-size: 23px;
+            font-weight: 400;
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        h4 {
+            font-size: 23px;
+            font-weight: 600;
+        }
+
+        .btn-group button {
+        border: map-get($index, style);
+        background-color: white;
+        color: $color-tipografia;
+
+        &:hover {
+            background-color: $color-fuerte;
+        }
+    }
+    }
