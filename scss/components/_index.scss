@@ -21,10 +21,8 @@ body {
 
 header {
     background-color: $color-base;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: map-get($index, width);
+    @extend %display;
 }
 
 .nombre-empresa {
@@ -51,11 +49,9 @@ header {
 }
 
 #menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     list-style: map-get($header, style);
     margin: 0;
+    @extend %display;
 
     a {
         font-size: 20px;
@@ -116,7 +112,7 @@ main {
     background-color: $color-base;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     cursor: default;
-    transition: all 400ms ease;
+    transition: $transition;
 
     &:hover {
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
@@ -134,11 +130,9 @@ main {
 
         a {
             display: inline-block;
-            padding: 10px;
+            @include card($borde, $padding, $transition);
             margin-top: 5px;
-            border: 1px solid $color-fuerte;
             border-radius: 4px;
-            transition: all 400ms ease;
             text-decoration: map-get($header, style);
             color: $color-fuerte;
 
@@ -164,15 +158,13 @@ main {
 
 footer {
     background-color: $color-base;
-    display: flex;
-    justify-content: space-between;
     padding: 10px;
+    @extend %displaydos;
 }
 
 #pie {
- display: flex;
- justify-content: space-between;
- 
+    @extend %displaydos;
+
     #punto,
     #punto-dos {
         list-style: map-get($header, style);
@@ -194,8 +186,7 @@ footer {
 
 .fb,
 .ig {
-    display: flex;
-    justify-content: space-between;
+    @extend %displaydos;
 
     #iconIg,
     #iconFb {

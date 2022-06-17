@@ -1,7 +1,6 @@
 /* MAIN CONTACTO */
 .contacto {
-        display: flex;
-        justify-content: center;
+        @extend %displaydos;
         p {
             font-size: 23px;
             font-weight: 400;

@@ -1,3 +1,15 @@
+#menu, header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacto, #tabla, section, .fb,
+.ig, #pie, footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* INDEX */
 * {
   box-sizing: border-box;
@@ -19,9 +31,6 @@ body {
 /* HEADER */
 header {
   background-color: rgb(245, 245, 245);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
 }
 
@@ -45,9 +54,6 @@ header {
 }
 
 #menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   list-style: none;
   margin: 0;
 }
@@ -122,11 +128,11 @@ main {
 }
 .card .contenido a {
   display: inline-block;
-  padding: 10px;
-  margin-top: 5px;
   border: 1px solid rgb(175, 93, 156);
-  border-radius: 4px;
+  padding: 10px;
   transition: all 400ms ease;
+  margin-top: 5px;
+  border-radius: 4px;
   text-decoration: none;
   color: rgb(175, 93, 156);
 }
@@ -146,15 +152,9 @@ main {
 /* FOOTER */
 footer {
   background-color: rgb(245, 245, 245);
-  display: flex;
-  justify-content: space-between;
   padding: 10px;
 }
 
-#pie {
-  display: flex;
-  justify-content: space-between;
-}
 #pie #punto,
 #pie #punto-dos {
   list-style: none;
@@ -171,11 +171,6 @@ footer {
   color: rgb(221, 185, 255);
 }
 
-.fb,
-.ig {
-  display: flex;
-  justify-content: space-between;
-}
 .fb #iconIg,
 .fb #iconFb,
 .ig #iconIg,
@@ -229,8 +224,6 @@ h3 {
 
 section {
   font-size: 18px;
-  display: flex;
-  justify-content: center;
   padding-top: 30px;
   padding-bottom: 30px;
   transition: all 400ms ease;
@@ -248,17 +241,7 @@ section a:hover {
   padding: 10px;
 }
 
-/* MAIN TALLES */
-#tabla {
-  display: flex;
-  justify-content: center;
-}
-
-/* MAIN CONTACTO */
-.contacto {
-  display: flex;
-  justify-content: center;
-}
+/* MAIN TALLES */ /* MAIN CONTACTO */
 .contacto p {
   font-size: 23px;
   font-weight: 400;
