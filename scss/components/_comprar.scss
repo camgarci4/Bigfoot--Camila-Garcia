@@ -13,8 +13,17 @@ h3 {
     text-align: center;
 }
 
+select {
+    option {
+        background-color: $color-fondo;
+        &:hover {
+            background-color: $color-fuerte;
+        }
+    }
+}
+
 .button button {
-    border: map-get($index, style);
+    border: 0px;
     background-color: $color-fondo;
     color: $color-tipografia;
 
@@ -24,12 +33,12 @@ h3 {
 }
 
 section {
+    @extend %displaytres;
     font-size: 18px;
     padding-top: 30px;
     padding-bottom: 30px;
     transition: all 400ms ease;
-    @extend %displaydos;
-
+    
     a {
         text-decoration: map-get($index, style);
         color: $color-fuerte;
