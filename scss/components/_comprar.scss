@@ -12,8 +12,13 @@ h3 {
     display: grid;
     text-align: center;
 }
-
-select {
+.selector {
+    max-width: 100%;
+    .subnombre {
+        font-size: 19px;
+        text-align: center;
+    }
+    .form-select {
     option {
         background-color: $color-fondo;
         &:hover {
@@ -21,6 +26,8 @@ select {
         }
     }
 }
+}
+
 
 .button button {
     border: 0px;

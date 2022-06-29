@@ -67,9 +67,7 @@
                                         <li><a class="dropdown-item" href="contacto.html">Consultas</a></li>
                                         <li><a class="dropdown-item" href="https://www.instagram.com/bigfootarg">Redes
                                                 sociales</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
+                                        
                                     </ul>
                                 </li>
                             </ul>
@@ -82,24 +80,31 @@
 
         <main class="contacto">
             <div class="card2">
-                <form action="#">
+                <form id="contact" action="#">
                     <h2>Contacto</h2>
                     <p>Completa el formulario con tus datos para cualquier consulta</p>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" Nombre required>
-                    <br>
-                    <br>
-                    <label for="email">Correo electronico:</label>
-                    <input type="text" Correo electronico required>
-                    <br>
-                    <br>
-                    <label for="telefono">Telefono:</label>
-                    <input type="text" Telefono required>
-                    <br>
-                    <br>
-                    <h4>Escribinos tu consulta</h4>
-                    <textarea name="texto" cols="30" rows="10">...</textarea>
-                    <br>
+                    <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+                      </div>
+                      <br>
+                      <div class="mb-3">
+                        <input class="form-control" type="file" id="formFileMultiple" multiple>
+                      </div>
+                      <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Escribinos tu consulta..</label>
+                      </div>
+                      <br>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="btn btn-primary">Reiniciar</button>
                         <button type="button" class="btn btn-primary">Enviar</button>
@@ -110,7 +115,6 @@
         </main>
 
         <footer>
-            <div id="pie">
                 <ul id="punto">
                     <li>TIENDA ONLINE</li>
                     <div class="tiendaOn">
@@ -133,7 +137,6 @@
                         </div>
                     </div>
                 </ul>
-            </div>
 
 
             <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -147,7 +150,7 @@
                     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <ul id="punto">
+                            <ul id="punto1">
                                 <div class="tiendaOn">
                                     <li><a href="./terminos.html">Terminos y condiciones</a></li>
                                     <li><a href="./cambios.html">Cambios y devoluciones</a></li>
@@ -168,7 +171,7 @@
                     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <ul id="punto-dos">
+                            <ul id="punto2">
                                 <div class="seguinos">
                                     <div class="ig">
                                         <i id="iconIg" class="fa-brands fa-instagram-square"></i>

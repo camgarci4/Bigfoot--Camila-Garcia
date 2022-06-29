@@ -5,12 +5,12 @@
 }
 
 .fb,
-.ig, #pie, footer {
+.ig, footer {
   display: flex;
   justify-content: space-between;
 }
 
-.contacto .card2, .table, section {
+.contacto .card2, section {
   display: flex;
   justify-content: center;
 }
@@ -89,6 +89,7 @@ header {
 main {
   justify-content: center;
   padding-bottom: 30px;
+  min-height: 100vh;
 }
 
 .containerIndex {
@@ -160,19 +161,19 @@ footer {
   padding: 10px;
 }
 
-#pie #punto,
-#pie #punto-dos {
+#punto,
+#punto-dos {
   list-style: none;
   justify-content: flex-start;
   margin: 0;
 }
-#pie #punto a,
-#pie #punto-dos a {
+#punto a,
+#punto-dos a {
   text-decoration: none;
   color: rgb(175, 93, 156);
 }
-#pie #punto a:hover,
-#pie #punto-dos a:hover {
+#punto a:hover,
+#punto-dos a:hover {
   color: rgb(221, 185, 255);
 }
 
@@ -219,10 +220,17 @@ h3 {
   text-align: center;
 }
 
-select option {
+.selector {
+  max-width: 100%;
+}
+.selector .subnombre {
+  font-size: 19px;
+  text-align: center;
+}
+.selector .form-select option {
   background-color: rgb(221, 185, 255);
 }
-select option:hover {
+.selector .form-select option:hover {
   background-color: rgb(175, 93, 156);
 }
 
@@ -254,7 +262,22 @@ section a:hover {
   padding: 10px;
 }
 
-/* MAIN TALLES */ /* MAIN CONTACTO */
+/* MAIN TALLES */
+main {
+  min-height: 100vh;
+}
+
+.tabla-column {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 35px;
+}
+.tabla-column .table {
+  width: 40%;
+}
+
+/* MAIN CONTACTO */
 .contacto .card2 {
   margin: 20px;
   padding-bottom: 10px;
@@ -284,6 +307,9 @@ section a:hover {
 .contacto .btn-group button:hover {
   background-color: rgb(175, 93, 156);
 }
+.contacto #contact {
+  margin: 15px;
+}
 
 @media screen and (max-width: 780px) {
   .contenedorGrid {
@@ -307,15 +333,15 @@ section a:hover {
   .card .contenido ul {
     font-size: 16px;
   }
+  .card2 p {
+    font-size: 16px;
+  }
   nav ul li a {
     font-size: 17px;
     padding: 3px 8px;
   }
   footer {
     flex-flow: column;
-  }
-  #pie {
-    display: none;
   }
   #columnUbi {
     padding-top: 20px;
@@ -334,6 +360,9 @@ section a:hover {
   .nombre-empresaMobile a {
     color: rgb(175, 93, 156);
     text-decoration: none;
+  }
+  .tabla-column {
+    flex-flow: column;
   }
   table,
 th,
@@ -366,20 +395,24 @@ td {
   #accordionFlushExample button:hover {
     color: rgb(175, 93, 156);
   }
-  #accordionFlushExample #punto,
-#accordionFlushExample #punto-dos {
+  #accordionFlushExample #punto1,
+#accordionFlushExample #punto2 {
     list-style: none;
     justify-content: flex-start;
     margin: 0;
   }
-  #accordionFlushExample #punto a,
-#accordionFlushExample #punto-dos a {
+  #accordionFlushExample #punto1 a,
+#accordionFlushExample #punto2 a {
     text-decoration: none;
     color: rgb(175, 93, 156);
   }
-  #accordionFlushExample #punto a:hover,
-#accordionFlushExample #punto-dos a:hover {
+  #accordionFlushExample #punto1 a:hover,
+#accordionFlushExample #punto2 a:hover {
     color: rgb(221, 185, 255);
+  }
+  #punto,
+#punto-dos {
+    display: none;
   }
 }
 @media screen and (max-width: 480px) {

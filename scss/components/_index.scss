@@ -82,6 +82,7 @@ header {
 main {
     justify-content: center;
     padding-bottom: 30px;
+    min-height: 100vh;
 }
 
 .containerIndex {
@@ -162,14 +163,11 @@ footer {
     @extend %displaydos;
 }
 
-#pie {
-    @extend %displaydos;
-
-    #punto,
-    #punto-dos {
-        list-style: map-get($header, style);
-        justify-content: flex-start;
-        margin: 0;
+#punto,
+#punto-dos {
+    list-style: map-get($header, style);
+    justify-content: flex-start;
+    margin: 0;
 
         a {
             text-decoration: map-get($header, style);
@@ -181,7 +179,6 @@ footer {
         }
 
     }
-}
 
 
 .fb,
