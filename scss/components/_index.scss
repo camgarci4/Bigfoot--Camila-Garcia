@@ -8,6 +8,11 @@
 body {
     background-color: $color-fondo;
     font-family: 'Montserrat', sans-serif;
+    transition: 0.3s ease all;
+
+    &.dark {
+        background: $color-tipografia;
+    }
 }
 
 .contenedorGrid {
@@ -23,6 +28,15 @@ header {
     background-color: $color-base;
     width: map-get($index, width);
     @extend %display;
+    height: 70px;
+
+    body.dark & {
+        background: $color-fuerte;
+        box-shadow: $sombraLight;
+        a {
+            color: $color-base;
+        }
+    }
 }
 
 .nombre-empresa {
@@ -63,6 +77,57 @@ header {
         &:hover {
             color: $color-tipografia;
         }
+    }
+    body.dark & {
+        a {
+            color: $color-base;
+            &:hover {
+                color: $color-tipografia;
+            }
+        }
+    }
+}
+
+//modo night
+.switch {
+    background-color: $color-fuerte;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    &::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: $color-base;
+        top: 0;
+        left: 0;
+        right: unset;
+        border-radius: 100px;
+        transition: .3s ease all;
+        box-shadow: 0px 0px 2px 2px $color-fuerte;
+    }
+    &.active {
+        background: $color-fondo;
+        &::after {
+            right: 0;
+            left: unset;
+        }
+        span {
+            color: $color-fuerte;
+        }
+    }
+    span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: #fff;
     }
 }
 
@@ -114,6 +179,7 @@ main {
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     cursor: default;
     transition: $transition;
+    border: none;
 
     &:hover {
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
@@ -161,6 +227,15 @@ footer {
     background-color: $color-base;
     padding: 10px;
     @extend %displaydos;
+    body.dark & {
+        background: $color-fuerte;
+    }
+}
+
+h4 {
+    body.dark & {
+        color: $color-base;
+    }
 }
 
 #punto,
@@ -168,6 +243,10 @@ footer {
     list-style: map-get($header, style);
     justify-content: flex-start;
     margin: 0;
+    body.dark & {
+        color: $color-base;
+    }
+
 
         a {
             text-decoration: map-get($header, style);
@@ -175,6 +254,12 @@ footer {
 
             &:hover {
                 color: $color-fondo;
+                body.dark & {
+                    color: $color-fondoDark;
+                }
+            }
+            body.dark & {
+                color: $color-base;
             }
         }
 

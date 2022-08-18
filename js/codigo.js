@@ -6,18 +6,18 @@
 ] */
 
 const remeras = [
-    { nombre: 'Harry Styles', precio: 2000, talles: ['s', 'm', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/harry styles.png" },
-    { nombre: 'Selena Quintanilla', precio: 1900, talles: ['m', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/selena-q.png" },
-    { nombre: 'Justin Bieber', precio: 1900, talles: ['s', 'm', 'l'], color: ['Blanco', 'Negro'], imagen:"../assets/img/justin.png" },
-    { nombre: 'Alex Turner', precio: 1700, talles: ['s', 'm', 'l'], color: ['Blanco', 'Negro'], imagen:"../assets/img/alex-turner.png" },
-    { nombre: 'Paramore', precio: 1800, talles: ['s', 'l', 'xl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/paramore.png" },
-    { nombre: 'El viaje de Chihiro', precio: 1800, talles: ['s', 'm', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/chihiro.png" },
-    { nombre: 'Vis a vis', precio: 1700, talles: ['m', 'l', 'xl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/vis-a-vis.png" },
-    { nombre: 'Sherlock Holmes', precio: 1900, talles: ['s', 'm', 'l', 'xl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/sherlock.png" },
-    { nombre: 'The Walking Dead', precio: 1700, talles: ['s', 'm', 'l', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/twd.png" },
-    { nombre: 'Gatos Ying & Yan', precio: 2100, talles: ['s', 'm', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/gatitoying.png" },
-    { nombre: 'Corazón Tradicional', precio: 2000, talles: ['m', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/corazon.png" },
-    { nombre: 'Gato #NotToday', precio: 1900, talles: ['s', 'm', 'l', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/gatito.png" },
+    { id: 1, nombre: 'Harry Styles', precio: 2000, talles: ['s', 'm', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/harry styles.png" },
+    { id: 2, nombre: 'Selena Quintanilla', precio: 1900, talles: ['m', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/selena-q.png" },
+    { id: 3, nombre: 'Justin Bieber', precio: 1900, talles: ['s', 'm', 'l'], color: ['Blanco', 'Negro'], imagen:"../assets/img/justin.png" },
+    { id: 4, nombre: 'Alex Turner', precio: 1700, talles: ['s', 'm', 'l'], color: ['Blanco', 'Negro'], imagen:"../assets/img/alex-turner.png" },
+    { id: 5, nombre: 'Paramore', precio: 1800, talles: ['s', 'l', 'xl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/paramore.png" },
+    { id: 6, nombre: 'El viaje de Chihiro', precio: 1800, talles: ['s', 'm', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/chihiro.png" },
+    { id: 7, nombre: 'Vis a vis', precio: 1700, talles: ['m', 'l', 'xl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/vis-a-vis.png" },
+    { id: 8, nombre: 'Sherlock Holmes', precio: 1900, talles: ['s', 'm', 'l', 'xl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/sherlock.png" },
+    { id: 9, nombre: 'The Walking Dead', precio: 1700, talles: ['s', 'm', 'l', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/twd.png" },
+    { id: 10, nombre: 'Gatos Ying & Yan', precio: 2100, talles: ['s', 'm', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/gatitoying.png" },
+    { id: 11, nombre: 'Corazón Tradicional', precio: 2000, talles: ['m', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/corazon.png" },
+    { id: 12, nombre: 'Gato #NotToday', precio: 1900, talles: ['s', 'm', 'l', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/gatito.png" },
 ]
 
 let cardRemeras = document.getElementById("cardRemeras");
@@ -68,11 +68,74 @@ boton.onclick = () => {
     carrito.push(remeras);
 }
 
-
 let precioRemera = 0;
 let carrito = [];
 let totalCarrito = 0;
 let cantidad;
+
+const guardarLocal = (producto, valor) => {localStorage.setItem(producto, valor)};
+guardarLocal("ListaRemeras", JSON.stringify(remeras));
+
+// Boton dark-light
+const btnSwitch = document.querySelector('#switch');
+btnSwitch.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    btnSwitch.classList.toggle('active');
+
+    if(document.body.classList.contains('dark')){
+        localStorage.setItem('dark-mode', 'true');
+    } else {
+        localStorage.setItem('dark-mode', 'false');
+    }
+});
+
+if(localStorage.getItem('dark-mode') === 'true') {
+    document.body.classList.add('dark');
+    btnSwitch.classList.add('active');
+} else {
+    document.body.classList.remove('dark');
+    btnSwitch.classList.remove('active');
+}
+
+// VEMOS QUE PASA
+function calcularCarrito() {
+    let itemIndex = carrito.findIndex(item => {
+    return item.estampa.toLowerCase() == disenio.toLowerCase()
+})
+
+if (itemIndex >= 0) {
+    carrito[itemIndex].cantidad += parseInt(cantidad);
+    carrito[itemIndex].subtotal += cantidad * precioRemera;
+} else {
+    carrito.push({
+        estampa: disenio,
+        cantidad: parseInt(cantidad),
+        subtotal: cantidad * precioRemera
+    })
+}
+
+totalCarrito += (cantidad * precioRemera)
+console.log(carrito);
+console.log(totalCarrito);
+
+alert("Se agregó " + disenio + " al carrito. El total hasta el momento es $" + totalCarrito);
+}
+
+
+function mostrarCarrito() {
+    alert("Carrito!")
+    mostrarMenu()
+}
+
+
+
+
+
+
+
+
+
+
 
 /*function mostrarMenu() {
     let input = prompt("Elegí una categoría:\n Artistas\n Peliculas\n Series\n Clasicos\n-'Carrito' para ver el carrito.");
@@ -127,35 +190,7 @@ let cantidad;
     mostrarMenu();
 } */
 
-// VEMOS QUE PASA
-function calcularCarrito() {
-    let itemIndex = carrito.findIndex(item => {
-    return item.estampa.toLowerCase() == disenio.toLowerCase()
-})
 
-if (itemIndex >= 0) {
-    carrito[itemIndex].cantidad += parseInt(cantidad);
-    carrito[itemIndex].subtotal += cantidad * precioRemera;
-} else {
-    carrito.push({
-        estampa: disenio,
-        cantidad: parseInt(cantidad),
-        subtotal: cantidad * precioRemera
-    })
-}
-
-totalCarrito += (cantidad * precioRemera)
-console.log(carrito);
-console.log(totalCarrito);
-
-alert("Se agregó " + disenio + " al carrito. El total hasta el momento es $" + totalCarrito);
-}
-
-
-function mostrarCarrito() {
-    alert("Carrito!")
-    mostrarMenu()
-}
 /* TEMPORAL
 function filtrarRemeras(estampas) {
     let remerasFiltradas = [];

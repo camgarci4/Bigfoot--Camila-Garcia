@@ -85,6 +85,9 @@
 
     #navbar {
         display: flex;
+        body.dark & {
+            background: $color-fuerte;
+        }
     }
 
     #navbar-ul a {
@@ -114,13 +117,20 @@
             list-style: map-get($header, style);
             justify-content: flex-start;
             margin: 0;
+            background:$color-fuerte;
 
             a {
                 text-decoration: map-get($header, style);
                 color: $color-fuerte;
+                body.dark & {
+                    color: $color-base;
+                }
 
                 &:hover {
                     color: $color-fondo;
+                    body.dark & {
+                        color: $color-tipografia;
+                    }
                 }
             }
 

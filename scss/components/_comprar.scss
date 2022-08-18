@@ -5,6 +5,9 @@ h3 {
     text-align: center;
     padding-bottom: 15px;
     padding-top: 15px;
+    body.dark & {
+        color: $color-base;
+    }
 }
 
 .container {
@@ -36,6 +39,9 @@ h3 {
 
     &:hover {
         background-color: $color-fuerte;
+        body.dark & {
+            background: $color-tipografia;
+        }
     }
 }
 
@@ -49,10 +55,16 @@ section {
     a {
         text-decoration: map-get($index, style);
         color: $color-fuerte;
+        body.dark & {
+            color: $color-base;
+        }
 
         &:hover {
             transform: translateY(5%);
             color: $color-tipografia;
+            body.dark & {
+                color: $color-fuerte;
+            }
         }
     }
 }
@@ -60,4 +72,10 @@ section {
 .selector {
     display: flex;
     padding: 10px;
+}
+
+.card-body {
+    body.dark & {
+        background: $color-fuerte;
+    }
 }
