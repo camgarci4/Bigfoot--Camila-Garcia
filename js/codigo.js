@@ -5,75 +5,125 @@
     { nombre: 'clasicos', estampas: ['Nike', 'Jordan', 'Gatitos', 'Tradicional'] },
 ] */
 
+// iu ex = UX = user experience
+// iu ai = UI = user interface
+
 const remeras = [
-    { id: 1, nombre: 'Harry Styles', precio: 2000, talles: ['s', 'm', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/harry styles.png" },
-    { id: 2, nombre: 'Selena Quintanilla', precio: 1900, talles: ['m', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/selena-q.png" },
-    { id: 3, nombre: 'Justin Bieber', precio: 1900, talles: ['s', 'm', 'l'], color: ['Blanco', 'Negro'], imagen:"../assets/img/justin.png" },
-    { id: 4, nombre: 'Alex Turner', precio: 1700, talles: ['s', 'm', 'l'], color: ['Blanco', 'Negro'], imagen:"../assets/img/alex-turner.png" },
-    { id: 5, nombre: 'Paramore', precio: 1800, talles: ['s', 'l', 'xl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/paramore.png" },
-    { id: 6, nombre: 'El viaje de Chihiro', precio: 1800, talles: ['s', 'm', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/chihiro.png" },
-    { id: 7, nombre: 'Vis a vis', precio: 1700, talles: ['m', 'l', 'xl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/vis-a-vis.png" },
-    { id: 8, nombre: 'Sherlock Holmes', precio: 1900, talles: ['s', 'm', 'l', 'xl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/sherlock.png" },
-    { id: 9, nombre: 'The Walking Dead', precio: 1700, talles: ['s', 'm', 'l', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/twd.png" },
-    { id: 10, nombre: 'Gatos Ying & Yan', precio: 2100, talles: ['s', 'm', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/gatitoying.png" },
-    { id: 11, nombre: 'Corazón Tradicional', precio: 2000, talles: ['m', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/corazon.png" },
-    { id: 12, nombre: 'Gato #NotToday', precio: 1900, talles: ['s', 'm', 'l', 'xxl'], color: ['Blanco', 'Negro'], imagen:"../assets/img/gatito.png" },
+    { id: 1, nombre: 'Harry Styles', precio: 2000, talles: ['s', 'm', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen: "../assets/img/harry styles.png" },
+    { id: 2, nombre: 'Selena Quintanilla', precio: 1900, talles: ['m', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen: "../assets/img/selena-q.png" },
+    { id: 3, nombre: 'Justin Bieber', precio: 1900, talles: ['s', 'm', 'l'], color: ['Blanco', 'Negro'], imagen: "../assets/img/justin.png" },
+    { id: 4, nombre: 'Alex Turner', precio: 1700, talles: ['s', 'm', 'l'], color: ['Blanco', 'Negro'], imagen: "../assets/img/alex-turner.png" },
+    { id: 5, nombre: 'Paramore', precio: 1800, talles: ['s', 'l', 'xl'], color: ['Blanco', 'Negro'], imagen: "../assets/img/paramore.png" },
+    { id: 6, nombre: 'El viaje de Chihiro', precio: 1800, talles: ['s', 'm', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen: "../assets/img/chihiro.png" },
+    { id: 7, nombre: 'Vis a vis', precio: 1700, talles: ['m', 'l', 'xl'], color: ['Blanco', 'Negro'], imagen: "../assets/img/vis-a-vis.png" },
+    { id: 8, nombre: 'Sherlock Holmes', precio: 1900, talles: ['s', 'm', 'l', 'xl'], color: ['Blanco', 'Negro'], imagen: "../assets/img/sherlock.png" },
+    { id: 9, nombre: 'The Walking Dead', precio: 1700, talles: ['s', 'm', 'l', 'xxl'], color: ['Blanco', 'Negro'], imagen: "../assets/img/twd.png" },
+    { id: 10, nombre: 'Gatos Ying & Yan', precio: 2100, talles: ['s', 'm', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen: "../assets/img/gatitoying.png" },
+    { id: 11, nombre: 'Corazón Tradicional', precio: 2000, talles: ['m', 'l', 'xl', 'xxl'], color: ['Blanco', 'Negro'], imagen: "../assets/img/corazon.png" },
+    { id: 12, nombre: 'Gato #NotToday', precio: 1900, talles: ['s', 'm', 'l', 'xxl'], color: ['Blanco', 'Negro'], imagen: "../assets/img/gatito.png" },
 ]
 
 let cardRemeras = document.getElementById("cardRemeras");
-let innerHTML = '';
 
-for (let i = 0; i < remeras.length; i++) {
-    let tallesHtml = ''
-    let colorHtml = ''
+if (cardRemeras) {
+    let innerHTML = '';
 
-    for (let t = 0; t < remeras[i].talles.length; t++) {
-        tallesHtml = tallesHtml + `<option value="${remeras[i].talles[t].toUpperCase()}">
-                ${remeras[i].talles[t].toUpperCase()}
-            </option>`;
-    }
+    for (let i = 0; i < remeras.length; i++) {
+        let tallesHtml = ''
+        let colorHtml = ''
 
-    for (let c = 0; c < remeras[i].color.length; c++) {
-        colorHtml = colorHtml + `<option value="${remeras[i].color[c]}">
-                ${remeras[i].color[c]}
-            </option>`;
-    }
+        for (let t = 0; t < remeras[i].talles.length; t++) {
+            tallesHtml = tallesHtml + `<option value="${remeras[i].talles[t].toUpperCase()}">
+                    ${remeras[i].talles[t].toUpperCase()}
+                </option>`;
+        }
 
-    innerHTML= innerHTML + `
-        <div class="col">
-            <div class="card">
-                <img src="${remeras[i].imagen}" class="card-img-top" alt="Remera de ${remeras[i].nombre}">
-                <div class="card-body">
-                    <h3 class="card-title">${remeras[i].nombre}</h3>
-                    <h5>$${remeras[i].precio}</h5>
-                    <div class="selector">
-                        <legend class="subnombre">Talle</legend>
-                        <select class="form-select" name="Talle">${tallesHtml}</select>
-                        <legend class="subnombre">Color</legend>
-                        <select class="form-select" name="Color">${colorHtml}</select>
-                    </div>
-                    <div class="button">
-                        <button id="boton" type="button" class="btn btn-secondary">Agregar al carrito</button>
+        for (let c = 0; c < remeras[i].color.length; c++) {
+            colorHtml = colorHtml + `<option value="${remeras[i].color[c]}">
+                    ${remeras[i].color[c]}
+                </option>`;
+        }
+
+        innerHTML = innerHTML + `
+            <div class="col">
+                <div class="card" id="remera_${remeras[i].id}">
+                    <img src="${remeras[i].imagen}" class="card-img-top" alt="Remera de ${remeras[i].nombre}">
+                    <div class="card-body">
+                        <h3 class="card-title">${remeras[i].nombre}</h3>
+                        <h5>$${remeras[i].precio}</h5>
+                        <div class="selector">
+                            <legend class="subnombre">Talle</legend>
+                            <select class="form-select" name="Talle">${tallesHtml}</select>
+                            <legend class="subnombre">Color</legend>
+                            <select class="form-select" name="Color">${colorHtml}</select>
+                        </div>
+                        <div class="button">
+                            <button id="boton" type="button" class="btn btn-secondary" onclick="agregarAlCarrito('${remeras[i].id}')">Agregar al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    `;
+        `;
+    }
+    cardRemeras.innerHTML = innerHTML;
 }
-cardRemeras.innerHTML = innerHTML;
 
-let boton=document.getElementById("boton");
-boton.onclick = () => {
-    console.log("Agregaste un producto al carrito");
-    carrito.push(remeras);
+function agregarAlCarrito(id) {
+    let talle = document.querySelectorAll("#remera_" + id + " [name=Talle]")[0].value
+    let color = document.querySelectorAll("#remera_" + id + " [name=Color]")[0].value
+    let remera = remeras.find(remera => {
+        return remera.id == id
+    })
+
+    if (!remera) return
+
+    let { precio } = remera
+
+    Swal.fire(
+        "Agregaste un producto al carrito: " + id,
+        "Agregado correctamente",
+        "success"
+    );
+    //console.log("Agregaste un producto al carrito " + id, talle, color, precio);
+
+    let itemIndex = carrito.findIndex(item => {
+        //operador AND
+        return item.id == id 
+            && item.talle == talle 
+            && item.color == color
+    })
+
+    if (itemIndex >= 0) {
+        carrito[itemIndex].cantidad += 1;
+        carrito[itemIndex].subtotal += precio;
+    } else {
+        carrito.push({
+            id: id,
+            cantidad: 1,
+            talle: talle,
+            color: color,
+            subtotal: precio
+        })
+    }
+    totalCarrito += precio
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+    localStorage.setItem('totalCarrito', totalCarrito)
+
+document.getElementById("tabla-carrito").innerHTML+=`
+    <tr>
+        <td>${remeras.id}</td>
+        <td>${remeras.nombre}</td>
+        <td>${remeras.precio}</td>
+    </tr>
+`;
 }
 
 let precioRemera = 0;
-let carrito = [];
-let totalCarrito = 0;
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+let totalCarrito = parseInt(localStorage.getItem('totalCarrito')) || 0;
 let cantidad;
 
-const guardarLocal = (producto, valor) => {localStorage.setItem(producto, valor)};
+const guardarLocal = (producto, valor) => { localStorage.setItem(producto, valor) };
 guardarLocal("ListaRemeras", JSON.stringify(remeras));
 
 // Boton dark-light
@@ -81,15 +131,11 @@ const btnSwitch = document.querySelector('#switch');
 btnSwitch.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     btnSwitch.classList.toggle('active');
-
-    if(document.body.classList.contains('dark')){
-        localStorage.setItem('dark-mode', 'true');
-    } else {
-        localStorage.setItem('dark-mode', 'false');
-    }
+    //operador ternario
+    localStorage.setItem('dark-mode', document.body.classList.contains('dark') ? 'true' : 'false')
 });
 
-if(localStorage.getItem('dark-mode') === 'true') {
+if (localStorage.getItem('dark-mode') === 'true') {
     document.body.classList.add('dark');
     btnSwitch.classList.add('active');
 } else {
@@ -97,127 +143,7 @@ if(localStorage.getItem('dark-mode') === 'true') {
     btnSwitch.classList.remove('active');
 }
 
-// VEMOS QUE PASA
-function calcularCarrito() {
-    let itemIndex = carrito.findIndex(item => {
-    return item.estampa.toLowerCase() == disenio.toLowerCase()
-})
-
-if (itemIndex >= 0) {
-    carrito[itemIndex].cantidad += parseInt(cantidad);
-    carrito[itemIndex].subtotal += cantidad * precioRemera;
-} else {
-    carrito.push({
-        estampa: disenio,
-        cantidad: parseInt(cantidad),
-        subtotal: cantidad * precioRemera
-    })
-}
-
-totalCarrito += (cantidad * precioRemera)
-console.log(carrito);
-console.log(totalCarrito);
-
-alert("Se agregó " + disenio + " al carrito. El total hasta el momento es $" + totalCarrito);
-}
-
-
 function mostrarCarrito() {
     alert("Carrito!")
     mostrarMenu()
 }
-
-
-
-
-
-
-
-
-
-
-
-/*function mostrarMenu() {
-    let input = prompt("Elegí una categoría:\n Artistas\n Peliculas\n Series\n Clasicos\n-'Carrito' para ver el carrito.");
-
-    if (!input) {
-        mostrarMenu()
-        return
-    }
-
-    if (input.toLowerCase() === 'carrito') {
-        mostrarCarrito()
-    }
-
-    let categoria = categorias.find((categoria) => {
-        return categoria.nombre.toLowerCase() == input.toLowerCase()
-    })
-
-    if (!categoria) {
-        alert("Categoría inválida")
-        mostrarMenu()
-        return
-    }
-
-    let estampas = categoria.estampas
-
-    remerasFiltradas = remeras.filter((remera) => {
-        return estampas.includes(remera.nombre)
-    })
-
-    let infoRemeras = remerasFiltradas.map(remera => {
-        return remera.nombre + " $" + remera.precio
-    })
-
-    let listaEstampas = infoRemeras.join("\n");
-
-    let hayRemeras = false;
-    let disenio;
-
-    while (!hayRemeras) {
-        disenio = prompt("Diseños disponibles:\n" + listaEstampas);
-
-        hayRemeras = consultarStock(disenio);
-
-        if (!hayRemeras) {
-            alert("Actualmente no tenemos stock de " + disenio);
-        }
-    }
-
-
-    cantidad = prompt("Gracias por elegir nuestra remera de " + disenio + ". Ingrese la cantidad deseada por el precio de $" + precioRemera + " cada una:");
-
-    mostrarMenu();
-} */
-
-
-/* TEMPORAL
-function filtrarRemeras(estampas) {
-    let remerasFiltradas = [];
-
-    for (let i = 0; i < remeras.length; i++) {
-        if (estampas.indexOf(remeras[i].nombre) >= 0) {
-            remerasFiltradas.push(remeras[i]);
-        }
-    }
-
-    return remerasFiltradas;
-}
-
-function encontrarCategoria(categoria) {
-    for (let i = 0; i < categorias.length; i++) {
-        if (categorias[i].nombre == categoria) return categorias[i];
-    }
-    return;
-}
-
-function consultarStock(disenio) {
-    infoRemera = remeras.find(remera => {
-        return remera.nombre.toLowerCase() == disenio.toLowerCase();
-    });
-
-    if (!infoRemera) return false;
-
-    precioRemera = infoRemera.precio;
-    return true;
-} */

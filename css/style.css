@@ -90,6 +90,24 @@ body.dark #menu a {
 body.dark #menu a:hover {
   color: black;
 }
+#menu #carrito {
+  background: none;
+  color: rgb(175, 93, 156);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  margin-right: 10px;
+  font-size: 20px;
+}
+body.dark #menu #carrito {
+  color: rgb(245, 245, 245);
+}
+body.dark #menu #carrito:hover {
+  color: black;
+}
+#menu #carrito:hover {
+  color: black;
+}
 
 .switch {
   background-color: rgb(175, 93, 156);
@@ -99,6 +117,7 @@ body.dark #menu a:hover {
   cursor: pointer;
   display: flex;
   outline: none;
+  margin-right: 10px;
 }
 .switch::after {
   content: "";
@@ -180,6 +199,9 @@ main {
   cursor: default;
   transition: all 400ms ease;
   border: none;
+}
+body.dark .card {
+  background: rgb(175, 93, 156);
 }
 .card:hover {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
@@ -373,6 +395,12 @@ main {
 .tabla-column .table {
   width: 40%;
 }
+body.dark .tabla-column .table {
+  background-color: black;
+}
+body.dark .tabla-column .table th, body.dark .tabla-column .table td {
+  color: rgb(221, 185, 255);
+}
 
 /* MAIN CONTACTO */
 .contacto .card2 {
@@ -383,6 +411,9 @@ main {
   background-color: rgb(245, 245, 245);
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
   cursor: default;
+}
+body.dark .contacto .card2 {
+  background: rgb(175, 93, 156);
 }
 .contacto p {
   font-size: 23px;

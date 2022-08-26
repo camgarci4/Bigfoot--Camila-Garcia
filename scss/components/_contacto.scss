@@ -9,6 +9,9 @@
                 background-color: rgb(245, 245, 245);
                 box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
                 cursor: default;
+                body.dark & {
+                    background: $color-fuerte;
+                }
         }
         p {
             font-size: 23px;

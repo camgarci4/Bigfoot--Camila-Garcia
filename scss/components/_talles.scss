@@ -7,8 +7,19 @@ main {
     justify-content: space-around;
     align-items: center;
     margin-top: 35px;
+    
 
     .table {
         width: 40%;
+        
+        body.dark & {
+        background-color: $color-tipografia;
+    }
+    th, td {
+        body.dark & {
+            color: $color-fondo;
+        }
+    }
+    
     }
 }

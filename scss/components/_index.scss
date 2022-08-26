@@ -86,6 +86,24 @@ header {
             }
         }
     }
+    #carrito {
+    background: none;
+    color: $color-fuerte;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    margin-right: 10px;
+    font-size: 20px;
+        body.dark & {
+            color: $color-base;
+            &:hover {
+                color: $color-tipografia;
+            }
+        }
+        &:hover {
+            color: $color-tipografia;
+        }
+    }
 }
 
 //modo night
@@ -97,6 +115,7 @@ header {
     cursor: pointer;
     display: flex;
     outline: none;
+    margin-right: 10px;
     &::after {
         content: "";
         display: block;
@@ -180,6 +199,10 @@ main {
     cursor: default;
     transition: $transition;
     border: none;
+
+    body.dark & {
+        background: $color-fuerte;
+    }
 
     &:hover {
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
